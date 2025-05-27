@@ -19,4 +19,8 @@ class Database {
         $stmt->execute($params);
         return $stmt;
     }
+    
+    public static function resultSet(\PDOStatement $stmt): array {
+        return $stmt->fetchAll();
+    }
 }

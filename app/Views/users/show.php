@@ -1,0 +1,22 @@
+<?php //include '../partials/header.php'; ?>
+
+<div class="container">
+    <h1>User Details</h1>
+    
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title"><?= htmlspecialchars($user['username']) ?></h5>
+            <p class="card-text">
+                <strong>Email:</strong> <?= htmlspecialchars($user['email']) ?><br>
+                <strong>Created At:</strong> <?= htmlspecialchars($user['created_at']) ?>
+            </p>
+            <a href="/users/<?= $user['id'] ?>/edit" class="btn btn-warning">Edit</a>
+            <form action="/users/<?= $user['id'] ?>/delete" method="POST" style="display: inline;">
+                <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
+            </form>
+        </div>
+    </div>
+    
+    <a href="/users" class="btn btn-secondary mt-3">Back to Users</a>
+</div>
+

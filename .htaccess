@@ -3,7 +3,7 @@ Options -Indexes
 
 # Enable rewrite engine
 RewriteEngine On
-RewriteBase /ROUND64/PHP/new-skeleton/php-mysql-project-skeleton/
+RewriteBase /ROUND64/PHP/new-skeleton/php-boilerplate/
 
 # Serve static assets directly from public/
 RewriteCond %{REQUEST_FILENAME} -f

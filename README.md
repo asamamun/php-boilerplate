@@ -13,3 +13,7 @@
 - Routing System
 
 Enjoy building with PHP!
+## SET BASE PATH
+    - at .env
+    - at Router.php
+    - .htaccess

@@ -17,7 +17,7 @@ class Router {
         $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
         // echo $uri;
         // Strip the base path
-        $basePath = '/ROUND64/PHP/new-skeleton/php-mysql-project-skeleton';
+        $basePath = '/ROUND64/PHP/new-skeleton/php-boilerplate/';
         $uri = str_replace($basePath, '', $uri);
         if ($uri === '') {
             $uri = '/';
