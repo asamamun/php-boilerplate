@@ -1,0 +1,18 @@
+# Disable directory browsing
+Options -Indexes
+
+# Enable rewrite engine
+RewriteEngine On
+RewriteBase /ROUND64/PHP/new-skeleton/php-mysql-project-skeleton/
+
+# Serve static assets directly from public/
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{REQUEST_URI} ^/css/ [OR]
+RewriteCond %{REQUEST_URI} ^/js/ [OR]
+RewriteCond %{REQUEST_URI} ^/assets/
+RewriteRule ^(.*)$ public/$1 [L,NC]
+
+# Route all other requests to index.php in the root
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L,NC]
