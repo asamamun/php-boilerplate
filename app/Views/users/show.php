@@ -1,4 +1,5 @@
-<?php //include '../partials/header.php'; ?>
+<!-- app/Views/users/show.php -->
+<?php view('partials/header', ['title' => 'User Profile']) ?>
 
 <div class="container">
     <h1>User Details</h1>
@@ -19,4 +20,7 @@
     
     <a href="<?= $_ENV['APP_URL'] ?>users" class="btn btn-secondary mt-3">Back to Users</a>
 </div>
+
+<?php view('partials/footer') ?>
+
 

@@ -7,6 +7,8 @@ use Dotenv\Dotenv;
 
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
+// Load helper functions
+// require_once __DIR__ . '/core/Helpers.php';
 
 // Database::init();
 

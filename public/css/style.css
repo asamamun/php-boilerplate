@@ -27,3 +27,10 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+h1{
+    color: #333;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 10px;
+    background-image: linear-gradient(to right, #667eea, #764ba2);
+}

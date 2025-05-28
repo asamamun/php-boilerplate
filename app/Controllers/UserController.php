@@ -30,7 +30,7 @@ class UserController extends Controller {
 
     // Display single user
     public function show($id) {
-        echo "<h3>" . $id . "</h3>";
+        // echo "<h3>" . $id . "</h3>";
         $user = $this->userModel->getById($id);
         
         if (!$user) {
@@ -70,7 +70,7 @@ class UserController extends Controller {
 
     // Show edit form
     public function edit($id) {
-        echo "<h3>" . $id . "</h3>";
+        // echo "<h3>" . $id . "</h3>";
         $user = $this->userModel->getById($id);
         
         if (!$user) {
