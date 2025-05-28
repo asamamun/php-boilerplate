@@ -1,4 +1,4 @@
-<?php //include '../partials/header.php'; ?>
+<?php view('partials/header', ['title' => 'Create User']) ?>
 
 <div class="container">
     <h1>Create New User</h1>
@@ -36,4 +36,4 @@
     </form>
 </div>
 
-<?php //include '../partials/footer.php'; ?>
+<?php view('partials/footer') ?>
