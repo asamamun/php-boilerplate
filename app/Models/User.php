@@ -26,15 +26,19 @@ class User {
 
     // Get all users
     public function getAll() {
-        $all = $this->db->query("SELECT id, name, email,phone, active, role, created FROM users");
-        return $this->db->resultSet($all);
+/*         $all = $this->db->query("SELECT id, name, email,phone, active, role, created FROM users");
+        return $this->db->resultSet($all); */
+        $all = $this->db->select('users', 'id, name, email,phone, active, role, created', 'active = :status', 'name ASC', 10)
+             ->bind(':status', '1')
+             ->fetchAll();
+        return $all;
     }
 
     // Get single user by ID
     public function getById($id) {
-        $this->db->query("SELECT id, username, email, created_at FROM users WHERE id = :id");
+        $this->db->query("SELECT id, name, email,phone, active, role, created FROM users WHERE id = :id");
         $this->db->bind(':id', $id);
-        return $this->db->single();
+        return $this->db->fetch(); 
     }
 
     // Create new user

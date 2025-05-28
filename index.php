@@ -8,7 +8,7 @@ use Dotenv\Dotenv;
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-Database::init();
+// Database::init();
 
 $router = new Router();
 $router->get('/', 'App\Controllers\HomeController@index');

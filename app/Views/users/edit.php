@@ -1,4 +1,4 @@
-<?php include '../partials/header.php'; ?>
+<?php include '../../partials/header.php'; ?>
 
 <div class="container">
     <h1>Edit User</h1>
@@ -36,4 +36,4 @@
     </form>
 </div>
 
-<?php include '../partials/footer.php'; ?>
+<?php include '../../partials/footer.php'; ?>
